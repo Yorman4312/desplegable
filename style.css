@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1, p, a, li, label{
+    color: white;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    background: rgb(45, 45, 45);
+}
+
+header{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background: rgb(30, 30, 30);
+    /*  */
+    nav{
+        width: 100%;
+        /*  */
+        .logo{
+            background: rgb(20, 20, 20);
+            width: 100%;
+            padding: 2vh;
+            text-align: center;
+            /*  */
+            a{
+                text-decoration: none;
+                font-size: 3rem;
+                font-weight: bold;
+            }
+        }
+        /*  */
+        .father{
+            width: 100%;
+            height: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            list-style: none;
+            text-align: start;
+            /*  */
+            .child{
+                width: 100%;
+                /*  */
+                input{
+                    display: none;
+                }
+                /*  */
+                label{
+                    display: block;
+                    width: 100%;
+                    margin: 1px;
+                    padding: 5px;
+                    font-size: 1rem;
+                    border-left: 5px solid transparent;
+                    border-radius: 6px;
+                    transition: all .3s;
+                    /*  */
+                    &:hover{
+                        cursor: pointer;
+                        border-left: 5px solid rgb(80, 80, 80);
+                        background: rgb(50, 50, 50);
+                    }
+                }
+                /*  */
+                .father1{
+                    display: none;
+                    position: absolute;
+                    width: 11.7%;
+                    height: auto;
+                    margin: 2px 0;
+                    list-style: none;
+                    padding: .6rem .3rem;
+                    background: rgb(50, 50, 50);
+                    border: 2px solid rgb(85, 85, 85);
+                    border-radius: 8px;
+                    /*  */
+                    .child1{
+                        display: block;
+                        border-radius: 5px;
+                        margin: 2px;
+                        padding: 10px;
+                        transition: all .15s;
+                        /*  */
+                        &:hover{
+                            background-color: rgb(65, 65, 65);
+                        }
+                        /*  */
+                        &:active{
+                            background-color: rgb(55, 55, 55);
+                        }
+                        /*  */
+                        a{
+                            display: block;
+                            width: 100%;
+                            text-decoration: none;
+                        }
+                    }
+                }
+                /*  */
+                input:checked + label{
+                    border-left: 5px solid rgb(220, 220, 220);
+                    background-color: rgb(50, 50, 50);
+                }
+                /*  */
+                input:checked + label + .father1{
+                    display: block;
+                    box-shadow: 0 0 10px rgb(70, 70, 70);
+                }
+            }
+        }
+    }
+}
+
+main{
+    width: 100%;
+    height: auto;
+    /*  */
+    section{
+        text-align: center;
+        padding: 5vh;
+        /*  */
+        h1{
+            display: inline-block;
+            font-size: 3rem;
+            border-bottom: 5px solid white;
+            margin-bottom: 2rem;
+        }
+        /*  */
+        p{
+            font-size: 1.3rem;
+            margin: 0 6rem;
+        }
+    }
+}
