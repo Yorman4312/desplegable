@@ -5,7 +5,12 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-h1, p, a, li, label{
+h2{
+    display: inline-block;
+    font-size: 2rem;
+}
+
+h2, p, a, li, label{
     color: white;
 }
 
@@ -16,7 +21,7 @@ body{
 
 .container{
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: row;
     background: rgb(45, 45, 45);
@@ -48,8 +53,9 @@ header{
         }
         /*  */
         .father{
+            display: inline-block;
             width: 100%;
-            height: 100%;
+            height: 198vh;
             margin: 10px 0;
             padding: 10px;
             list-style: none;
@@ -58,11 +64,11 @@ header{
             .child{
                 width: 100%;
                 /*  */
-                input{
+                .botton-toggle{
                     display: none;
                 }
                 /*  */
-                label{
+                .botton-icon{
                     display: block;
                     width: 100%;
                     margin: 1px;
@@ -100,13 +106,14 @@ header{
                         /*  */
                         &:hover{
                             background-color: rgb(65, 65, 65);
+                            cursor: pointer;
                         }
                         /*  */
                         &:active{
                             background-color: rgb(55, 55, 55);
                         }
                         /*  */
-                        a{
+                        a, .p, li{
                             display: block;
                             width: 100%;
                             text-decoration: none;
@@ -114,12 +121,61 @@ header{
                     }
                 }
                 /*  */
-                input:checked + label{
+                .botton-toggle:checked + .botton-icon{
                     border-left: 5px solid rgb(220, 220, 220);
                     background-color: rgb(50, 50, 50);
                 }
                 /*  */
-                input:checked + label + .father1{
+                .botton-toggle:checked + .botton-icon + .father1{
+                    display: block;
+                    box-shadow: 0 0 10px rgb(70, 70, 70);
+                }
+            }
+            /*  */
+            .child1{
+                width: 100%;
+                /*  */
+                .botton-toggle1{
+                    display: none;
+                }
+                /*  */
+                .botton-icon1{
+                    margin: 0;
+                    padding: 0;
+                    display: block;
+                    /* background: yellow; */
+                }
+                /*  */
+                .father2{
+                    left: 10.2rem;
+                    display: none;
+                    position: absolute;
+                    width: 120%;
+                    height: auto;
+                    margin: 2px 0;
+                    padding: .6rem .3rem;
+                    background: rgb(50, 50, 50);
+                    border: 2px solid rgb(85, 85, 85);
+                    border-radius: 8px;
+                    /*  */
+                    .child2{
+                        display: block;
+                        border-radius: 5px;
+                        margin: 2px;
+                        padding: 10px;
+                        transition: all .15s;
+                        /*  */
+                        &:hover{
+                            background-color: rgb(65, 65, 65);
+                        }
+                        /*  */
+                        &:active{
+                            background-color: rgb(55, 55, 55);
+                        }
+                    }
+                }
+                /*  */
+                .botton-toggle1:checked + .botton-icon1 + .father2{
                     display: block;
                     box-shadow: 0 0 10px rgb(70, 70, 70);
                 }
@@ -131,16 +187,85 @@ header{
 main{
     width: 100%;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    /*  */
+    .header{
+        width: 100%;
+        height: auto;
+        padding: 1vh;
+        background: rgb(30, 30, 30);
+        /*  */
+        ul{
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            /*  */
+            li{
+                padding: 19px;
+                display: inline-block;
+                /*  */
+                a{
+                    padding: 4px;
+                    font-size: 1.3rem;
+                    text-decoration: none;
+                    border-bottom: 2px solid transparent;
+                    transition: all .3s;
+                    /*  */
+                    &:hover{
+                        border-bottom: 5px solid rgb(80, 80, 80);
+                    }
+                }
+                /*  */
+                span{
+                    display: flex;
+                    padding: 5px;
+                    border-radius: 50%;
+                    background: rgb(55, 55, 55);
+                    transition: all .3s;
+                    /*  */
+                    img{
+                        width: 25px;
+                        height: auto;
+                    }
+                    /*  */
+                    &:hover{
+                        cursor: pointer;
+                        background: rgb(70, 70, 70);
+                    }
+                }
+            }
+        }
+    }
     /*  */
     section{
+        display: flex;
+        flex-direction: column;
         text-align: center;
-        padding: 5vh;
         /*  */
-        h1{
-            display: inline-block;
-            font-size: 3rem;
-            border-bottom: 5px solid white;
-            margin-bottom: 2rem;
+        article{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            /*  */
+            h2{
+                padding: 10px;
+                background-color: rgb(35, 35, 35);
+            }
+            /*  */
+            .imagen{
+                /*  */
+                img{
+                    border-radius: 15px;
+                    width: auto;
+                    height: auto;
+                    box-shadow: 0 0 20px rgb(69, 255, 75);
+                }
+            }
         }
         /*  */
         p{

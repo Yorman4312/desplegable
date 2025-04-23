@@ -29,8 +29,16 @@
                         <label for="botton-config" class="botton-icon">Configuración ></label>
                         <ul class="father1">
                             <li class="child1"><a href="#">Privacidad y seguridad</a></li>
-                            <li class="child1"><a href="#">Administrar cuenta</a></li>
-                            <li class="child1"><a href="#">Tema</a></li>
+                            <li class="child1">
+                                <input type="checkbox" id="botton-tema" class="botton-toggle1">
+                                <label for="botton-tema" class="botton-icon1">Tema ></label>
+                                <!--  -->
+                                <ul class="father2">
+                                    <li class="child2"><a href="#">Claro</a></li>
+                                    <li class="child2"><a href="#">Oscuro</a></li>
+                                    <li class="child2"><a href="#">Tema del dispositivo</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                     <li class="child">
@@ -55,9 +63,26 @@
         </header>
         <!--  -->
         <main>
+            <div class="header">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#biblioteca">Biblioteca</a></li>
+                    <li><span><img src="/search.png" alt="Buscar"></span></li>
+                </ul>
+            </div>
             <section>
-                <h1>ESTO ES UN TÍTULO</h1>
-                <p>Está es una página de prueba, por lo que no encontrarás nada de contenido. Se está poniendo en practica los menus desplegables, en la que aplique mis conocimientos y por eso mismo puede tener errores, hice mi mejor esfuerzo. ¿Pudo quedar mejor?, lo más probable es que si, por ejemplo que al dar click a otra opción, desaparezca la anterior, pero no encontre la manera, o bueno, no por mis medios. Voy a investigar y profundizar mejor sobre el tema, pero por hoy me doy por servido!!</p>
+                <article>
+                    <h2>ESTO ES UN TÍTULO</h2>
+                    <p>Está es una página de prueba, por lo que no encontrarás nada de contenido. Se está poniendo en practica los menus desplegables, en la que aplique mis conocimientos y por eso mismo puede tener errores, hice mi mejor esfuerzo. ¿Pudo quedar mejor?, lo más probable es que si, por ejemplo que al dar click a otra opción, desaparezca la anterior, pero no encontre la manera, o bueno, no por mis medios. Voy a investigar y profundizar mejor sobre el tema, pero por hoy me doy por servido!!</p>
+                </article>
+                <!--  -->
+                <article id="biblioteca">
+                    <h2>ESTÁ ES LA BIBLIOTECA</h2>
+                    <p>Una biblioteca, podrás encontrar mucha información, ¿de qué? yo tampoco lo sé, de lo que sea que te imagines. Esto es una versión en desarrollo por lo que no encontrarás mucho que hacer, ni información, asi que te invito a visitar otras páginas!!</p>
+                    <div class="imagen">
+                        <img src="/Captura de pantalla 2025-04-22 214843.png" alt="Atletico Nacional">
+                    </div>
+                </article>
             </section>
         </main>
     </div>
